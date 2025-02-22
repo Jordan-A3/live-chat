@@ -54,24 +54,45 @@ export default function LoginPage() {
 							</section>
 						</div>
 					</div>
-					{users.map((user) => (
-						<div
-							key={user.id}
-							className="flex flex-row gap-3 p-3 justify-center items-center cursor-pointer"
-						>
-							<Avatar name={user.name} />
-							<div className="flex flex-row w-full h-full justify-center items-center py-2">
-								<section className="flex flex-col w-full justify-center items-start">
-									<h1 className="font-bold text-sm">{user.name}</h1>
-									<p className="text-xs">At what time is the meeting?</p>
-								</section>
+					<div className="flex flex-row gap-3 p-3 justify-center items-center cursor-pointer">
+						<Avatar name={"Jordan"} />
+						<div className="flex flex-row w-full h-full justify-center items-center py-2">
+							<section className="flex flex-col w-full justify-center items-start">
+								<h1 className="font-bold text-sm">{"Jordan"}</h1>
+								<p className="text-xs">At what time is the meeting?</p>
+							</section>
 
-								<div className="flex h-full justify-end items-end">
-									<p className="text-xs">12:53</p>
-								</div>
+							<div className="flex h-full justify-end items-end">
+								<p className="text-xs">12:53</p>
 							</div>
 						</div>
-					))}
+					</div>
+					<div className="flex flex-row gap-3 p-3 justify-center items-center cursor-pointer">
+						<Avatar name={"Gustavo"} />
+						<div className="flex flex-row w-full h-full justify-center items-center py-2">
+							<section className="flex flex-col w-full justify-center items-start">
+								<h1 className="font-bold text-sm">{"Gustavo"}</h1>
+								<p className="text-xs">At what time is the meeting?</p>
+							</section>
+
+							<div className="flex h-full justify-end items-end">
+								<p className="text-xs">12:53</p>
+							</div>
+						</div>
+					</div>
+					<div className="flex flex-row gap-3 p-3 justify-center items-center cursor-pointer">
+						<Avatar name={"Tiago"} />
+						<div className="flex flex-row w-full h-full justify-center items-center py-2">
+							<section className="flex flex-col w-full justify-center items-start">
+								<h1 className="font-bold text-sm">{"Tiago"}</h1>
+								<p className="text-xs">At what time is the meeting?</p>
+							</section>
+
+							<div className="flex h-full justify-end items-end">
+								<p className="text-xs">12:53</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<ChatSection selectedUser={selectedUser} />
 			</div>
