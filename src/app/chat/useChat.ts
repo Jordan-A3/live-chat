@@ -3,9 +3,6 @@ import type { User } from "@/models/user";
 import { MessageService } from "@/services/MessageService";
 import { UserService } from "@/services/UserServices";
 import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
-
-const socket = io("http://localhost:4000"); // ⚠️ Troque pela URL do seu backend
 
 const useChat = () => {
 	const [users, setUsers] = useState<User[]>([]);
@@ -16,7 +13,6 @@ const useChat = () => {
 
 	useEffect(() => {
 		loadUsers();
-		listenForMessages();
 	}, []);
 
 	async function loadUsers() {
@@ -48,12 +44,6 @@ const useChat = () => {
 			...prev,
 			{ text: reply.data.message, isUser: false },
 		]);
-	}
-
-	function listenForMessages() {
-		socket.on("newMessage", (data) => {
-			console.log({ data });
-		});
 	}
 
 	return {
