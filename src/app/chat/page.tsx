@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
-
 import LivingRoom from "@/assets/living-room.jpg";
 import { bottts } from "@dicebear/collection";
 import { createAvatar } from "@dicebear/core";
+import Image from "next/image";
 import { useEffect } from "react";
 import useChat from "./useChat";
 // import CityBuildings from "@/assets/city-buildings.jpg";
